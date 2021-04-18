@@ -1,0 +1,274 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap");
+/* --------------- Basic setup --------------- */
+body,
+html {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  font-size: 62.5%;
+}
+
+h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.7rem;
+  letter-spacing: 2px;
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+h3 {
+  font-size: 1.1rem;
+  font-weight: 300;
+  margin-bottom: 8px;
+  margin-top: 2%;
+}
+
+.examplePage {
+  height: 200vh;
+  width: 100%;
+  background-color: bisque;
+  z-index: 10;
+}
+
+.example {
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 100px 0;
+}
+
+.Blured {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 100;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+}
+
+.popup {
+  position: fixed;
+  z-index: 500;
+  background-color: #fff;
+  width: 60%;
+  border: 1px solid #ccc;
+  box-shadow: #c4c4c4 0px 3px 8px;
+  padding: 16px;
+  left: 20%;
+  height: 70%;
+  top: 10%;
+  box-sizing: border-box;
+  transition: all 0.3s ease-out;
+}
+
+.tableTitles {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 40% 40% 20%;
+}
+.form {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 40% 40% 20%;
+  border-bottom: 1px solid #ccc;
+}
+
+.partnerLink {
+  font-size: 0.9rem;
+  display: inline-block;
+  width: 70%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-top: 2%;
+}
+
+.table {
+  max-height: 50vh;
+  overflow-y: auto;
+  z-index: 800;
+}
+
+/* Toggle button */
+
+.switch {
+  position: relative;
+  width: 36px;
+  height: 21px;
+  margin-left: 15%;
+  margin-top: 2%;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 4px;
+  top: 3px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(13px);
+}
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+/* Decision buttons */
+
+.decisionButtons {
+  width: 80%;
+  margin: 15px auto 0 auto;
+  display: grid;
+  grid-template-columns: 50% 50%;
+}
+
+.acceptBtn,
+.rejectBtn {
+  margin: 0 auto;
+  outline: none;
+  padding: 5px 10px;
+  font-size: 1.1rem;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.acceptBtn {
+  background-color: green;
+  width: fit-content;
+}
+.rejectBtn {
+  background-color: red;
+  width: fit-content;
+}
+
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
+
+/* Queries */
+@media (max-width: 1024px) {
+  .popup {
+    width: 80%;
+    left: 10%;
+  }
+}
+
+@media (max-width: 768px) {
+  .popup {
+    width: 90%;
+    left: 5%;
+  }
+  h1 {
+    font-size: 1.4rem;
+  }
+  h2 {
+    font-size: 1.2rem;
+  }
+  h3 {
+    font-size: 0.9rem;
+  }
+  .switch {
+    margin-top: 4%;
+  }
+  .partnerLink {
+    font-size: 0.7rem;
+  }
+  .switch {
+    width: 25px;
+    height: 13px;
+    margin-top: 7%;
+  }
+  .slider:before {
+    height: 9px;
+    width: 9px;
+    left: 1px;
+    top: 2px;
+  }
+}
+@media (max-width: 425px) {
+  .popup {
+    width: 95%;
+    left: 2.5%;
+  }
+  h1 {
+    font-size: 1.3rem;
+  }
+  h2 {
+    font-size: 1rem;
+  }
+  h3 {
+    font-size: 0.7rem;
+  }
+  .acceptBtn,
+  .rejectBtn {
+    font-size: 0.8rem;
+  }
+}
